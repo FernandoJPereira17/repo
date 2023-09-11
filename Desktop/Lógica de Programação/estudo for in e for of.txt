@@ -1,0 +1,116 @@
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const tabuada = 2;
+
+for (let i = 0; i < numeros.length; i++) {
+    console.log(numeros[i] * 1, `Tabuada do ${numeros[i]}` )
+    console.log(numeros[i] * 2)
+    console.log(numeros[i] * 3)
+    console.log(numeros[i] * 4)
+    console.log(numeros[i] * 5)
+    console.log(numeros[i] * 6)
+    console.log(numeros[i] * 7)
+    console.log(numeros[i] * 8)
+    console.log(numeros[i] * 9)
+    console.log(numeros[i] * 10)
+}
+
+for (let i = 0; i < numeros.length; i++) {
+    console.log(numeros[i] * tabuada)
+}
+
+for (let i = 10; i > 0; i--) {
+    console.log(i)
+}
+
+let soma = 0;
+for (let i = 0; i < numeros.length; i++) {
+    soma += numeros[i];
+}
+console.log(soma)
+
+Exercícios com for in:
+
+Propriedades do objeto: Crie um objeto com algumas propriedades e use um loop for in para listar todas as propriedades e seus valores.
+
+Média de notas: Crie um objeto que represente as notas de um aluno em várias matérias (por exemplo, Matemática, História, Ciências) e use um loop for in para calcular a média das notas.
+.nota
+const notas = [
+    {
+        materia: 'Matemática',
+        nota: '7'
+    },
+    {
+        materia: 'Português',
+        nota: '8'
+    },
+    {
+        materia: 'Química',
+        nota: '5'
+    }
+]
+
+for (const index in notas) {
+    console.log(`${notas[index].materia}: ${notas[index].nota}`)
+}
+
+let soma = 0;
+
+for (const index in notas) {
+    soma += Number(notas[index].nota)
+}
+
+const media = (soma / notas.length).toFixed(2)
+
+console.log(media)
+
+Iteração em matriz: Crie uma matriz com alguns elementos e use um loop for of para imprimir cada elemento da matriz.
+
+Cálculo de soma de elementos: Crie uma matriz de números e use um loop for of para calcular a soma de todos os elementos da matriz.
+
+Listando caracteres: Receba uma string do usuário e use um loop for of para listar cada caractere da string.
+
+const clientes = [
+    {
+        nome: 'Cliente 1',
+        valor: 450,
+        quantidade: 5,
+        produto: 'Produto 1'
+    },
+    {
+        nome: 'Cliente 2',
+        valor: 100,
+        quantidade: 10,
+        produto: 'Produto 2'
+    },
+    {
+        nome: 'Cliente 3',
+        valor: 250,
+        quantidade: 5,
+        produto: 'Produto 1'
+    },
+    {
+        nome: 'Cliente 4',
+        valor: 140,
+        quantidade: 8,
+        produto: 'Produto 4'
+    },
+]
+
+/**
+ * 1ª - O valor total gasto por clientes
+ * 2ª - O valor total de todos os clientes juntos
+ * 3ª - A quantidade total de itens vendidos todos juntos
+ * */ 
+
+let totalVendido = 0;
+let quantidadeVendida = 0;
+
+for (const cliente of clientes) {
+    const total = (cliente.quantidade * cliente.valor).toLocaleString("pt-br", { style: "currency", currency: "BRL" });
+    console.log(`${cliente.nome}: ${total}`);
+    totalVendido += (cliente.quantidade * cliente.valor);
+    quantidadeVendida += cliente.quantidade;
+}
+
+console.log(`Total vendido: ${totalVendido.toLocaleString("pt-br", { style: "currency", currency: "BRL" })}`);
+console.log(`Quantidade vendida: ${quantidadeVendida}`);
