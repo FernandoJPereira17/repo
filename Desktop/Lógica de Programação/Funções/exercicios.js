@@ -72,22 +72,22 @@
 
 
 
-const minhaString = "DigitalCollegeFullStackFS22-ProfSamuel";
-let contagem = 0;
+// const minhaString = "DigitalCollegeFullStackFS22-ProfSamuel";
+// let contagem = 0;
 
-function contarLetras(minhaString) {
-
-    for (let i = 0; i < minhaString.length; i++) {
-        if (minhaString[i]) {
-            contagem++;
-        }
-    }
-    return contagem;
-}
-
-const numeroDeLetras = contarLetras(minhaString);
-console.log(`O número de letras na string é: ${numeroDeLetras}`);
-
+// function contarLetras(minhaString) {
+  
+//     for (let i = 0; i < minhaString.length; i++) {
+//       if (minhaString[i]) {
+//         contagem++;
+//       }
+//     }
+//     return contagem;
+//   }
+  
+//   const numeroDeLetras = contarLetras(minhaString);
+//   console.log(`O número de letras na string é: ${numeroDeLetras}`);
+  
 //Média de notas: Crie uma função que aceite uma matriz/lista(array) 
 //  * de notas e calcule a média das notas usando um loop for of.
 // * - Recebe um array como parâmetro
@@ -96,51 +96,35 @@ console.log(`O número de letras na string é: ${numeroDeLetras}`);
 // * - For of
 // * - Console.log na média
 
-function filtrarAlunosPorNota(alunos, notaMinima) {
-    // Inicializa um array para armazenar os alunos que atendem ao critério
-    const alunosFiltrados = [];
 
-    // Loop através das propriedades do objeto (que representam os alunos)
-    for (const aluno in alunos) {
-        // Verifica se a propriedade é um objeto (para garantir que seja um aluno)
-        if (typeof alunos[aluno] === 'object') {
-            // Verifica se a nota do aluno é maior que a nota mínima especificada
-            if (alunos[aluno].nota > notaMinima) {
-                // Adiciona o aluno ao array de alunos filtrados
-                alunosFiltrados.push({
-                    nome: alunos[aluno].nome,
-                    idade: alunos[aluno].idade,
-                    nota: alunos[aluno].nota,
-                });
-            }
-        }
+const alunos = [
+
+    {
+        nome: 'Fernando',
+        idade: 26,
+        nota: 7,
+    },
+    {
+        nome: 'Maria',
+        idade: 20,
+        nota: 9,
+    },
+    {
+        nome: 'Lara',
+        idade: 15,
+        nota: 8,
     }
 
-    // Retorna o array de alunos que atendem ao critério
-    return alunosFiltrados;
+];
+
+function alunoAprovado (alunos) {
+
+    for (const index in alunos){
+        const aluno = alunos[index];
+        if(alunos[index].nota >=7){
+            console.log (`O ${aluno.nome} passou com a nota ${aluno.nota}`);
+        }
+    }
 }
 
-// Exemplo de uso da função
-const listaDeAlunos = {
-    aluno1: {
-        nome: "João",
-        idade: 20,
-        nota: 8.5,
-    },
-    aluno2: {
-        nome: "Maria",
-        idade: 22,
-        nota: 7.0,
-    },
-    aluno3: {
-        nome: "Pedro",
-        idade: 21,
-        nota: 9.2,
-    },
-};
-
-const notaMinima = 8.0;
-const alunosAprovados = filtrarAlunosPorNota(listaDeAlunos, notaMinima);
-
-console.log("Alunos com nota superior a", notaMinima);
-console.log(alunosAprovados);
+alunoAprovado(alunos)
