@@ -76,7 +76,7 @@
 // let contagem = 0;
 
 // function contarLetras(minhaString) {
-  
+
 //     for (let i = 0; i < minhaString.length; i++) {
 //       if (minhaString[i]) {
 //         contagem++;
@@ -84,10 +84,10 @@
 //     }
 //     return contagem;
 //   }
-  
+
 //   const numeroDeLetras = contarLetras(minhaString);
 //   console.log(`O número de letras na string é: ${numeroDeLetras}`);
-  
+
 //Média de notas: Crie uma função que aceite uma matriz/lista(array) 
 //  * de notas e calcule a média das notas usando um loop for of.
 // * - Recebe um array como parâmetro
@@ -97,34 +97,90 @@
 // * - Console.log na média
 
 
-const alunos = [
+// const alunos = [
 
+//     {
+//         nome: 'Fernando',
+//         idade: 26,
+//         nota: 7,
+//     },
+//     {
+//         nome: 'Maria',
+//         idade: 20,
+//         nota: 9,
+//     },
+//     {
+//         nome: 'Lara',
+//         idade: 15,
+//         nota: 8,
+//     }
+
+// ];
+
+// function alunoAprovado (alunos) {
+
+//     for (const index in alunos){
+//         const aluno = alunos[index];
+//         if(alunos[index].nota >=7){
+//             console.log (`O ${aluno.nome} passou com a nota ${aluno.nota}`);
+//         }
+//     }
+// }
+
+// alunoAprovado(alunos);
+
+const vendas = [
     {
-        nome: 'Fernando',
-        idade: 26,
-        nota: 7,
+        id: 1,
+        produto: "Computador",
+        quantidade: 15,
+        valor: 2900,
     },
     {
-        nome: 'Maria',
-        idade: 20,
-        nota: 9,
+        id: 2,
+        produto: "Monitor",
+        quantidade: 10,
+        valor: 400,
     },
     {
-        nome: 'Lara',
-        idade: 15,
-        nota: 8,
-    }
-
+        id: 3,
+        produto: "Cadeira",
+        quantidade: 5,
+        valor: 799,
+    },
+    {
+        id: 4,
+        produto: "Teclado",
+        quantidade: 19,
+        valor: 130,
+    },
+    {
+        id: 5,
+        produto: "Mouse",
+        quantidade: 30,
+        valor: 70,
+    },
 ];
 
-function alunoAprovado (alunos) {
-
-    for (const index in alunos){
-        const aluno = alunos[index];
-        if(alunos[index].nota >=7){
-            console.log (`O ${aluno.nome} passou com a nota ${aluno.nota}`);
+function calcularVendas(vendas) {
+        let total = 0;
+        for (const produto of produtos){
+            let soma = produto.quantidade * produto.valor;
+            total += soma;
         }
+        console.log(`Valor de venda mensal: R$ ${total} de todos os produtos juntos`);
     }
-}
 
-alunoAprovado(alunos)
+    // function somaTotalPorProdutos(produtos){
+    //     for (const produto of produtos){
+    //         let 
+    //     }
+    // }
+
+/**
+ * Função - parâmetro (array de objetos)
+ * Calcular o valor total de vendas realizado de todos os protudos juntos
+ * Calcular o valor total por produto
+ * console.log(Valor de venda mensal: R$ VALOR TOTAL de todos os produtos)
+ * console.log(Valor de venda PRODUTO: R$ VALOR TOTAL por PRODUTO)
+ */
