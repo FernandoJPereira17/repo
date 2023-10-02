@@ -88,7 +88,7 @@
 /** Métodos abaixos : < .............. >
  * Push, pop, unshift, shift
  */
-const frutas = ['Maca', 'Banana', 'pera'];
+// const frutas = ['Maca', 'Banana', 'pera'];
 // console.log(frutas);
 
 //=> Push envia o valor para o final do array...
