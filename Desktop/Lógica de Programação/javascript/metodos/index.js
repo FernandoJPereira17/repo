@@ -39,7 +39,7 @@
 // const numeros = [10, 20, 30, 40, 50];
 
 // numeros.map((numeros, index)=> {
-    
+
 // console.log(numeros * 2);
 
 // });
@@ -130,11 +130,119 @@
 //       const newTemp = (temp * 1.8 + 32).toFixed(2);
 //       return Number(newTemp);
 //     });
-  
+
 //     return fahreinheit;
 //   }
-  
+
 //   console.log(celciusToFahrenheit(temperature));
 
-  //...............................................//
+//...............................................//
 
+//Refatoração//
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const numbers2 = [6, 7, 8, 9, 15];
+// const temperature = [42, 33.5, 17, 9, -5, 12];
+
+// numbers.map((number) => {
+//   return console.log(number ** 2);
+// });
+
+
+
+// numbers.map((number) => {
+//   if (number % 2 === 0) {
+//     return console.log(number);
+//   }
+// });
+
+//Refatoração <...>
+
+// const numberr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// function evenNumbers(arr) {
+//   const newArr = [];
+
+//   arr.map((numberr) => {
+//     if (numberr % 2 === 0) {
+//       return newArr.push(numberr);
+//     }
+//   });
+//   return newArr;
+// }
+
+// console.log(evenNumbers(numbers));
+
+
+// const strings = ["Um", "Teste", "Outra string", "Mais um teste"];
+
+// strings.map((string) => {
+//   return console.log(string.length);
+// });
+
+// function doubleNumbers(arr) {
+//   const double = arr.map((value) => value * 2);
+
+//   return double;
+// }
+
+// console.log(doubleNumbers(numbers));
+// console.log(doubleNumbers(numbers2));
+
+// function celciusToFahrenheit(arr) {
+//   const fahreinheit = arr.map((temp) => {
+//     const newTemp = (temp * 1.8 + 32).toFixed(2);
+//     return Number(newTemp);
+//   });
+
+//   return fahreinheit;
+// }
+
+// console.log(celciusToFahrenheit(temperature));
+
+/**
+ * Exercícios com map
+
+Exercícios com map
+
+Calcular Áreas:
+Crie uma função que recebe um array de objetos, onde cada objeto possui as propriedades 
+largura e altura, e retorna um novo array com as áreas correspondentes (largura * altura).
+
+Transformar Datas:
+Crie uma função que recebe um array de strings representando 
+datas no formato "dd/mm/yyyy" e retorna um novo array com as datas no formato "mm/dd/yyyy".
+
+Contagem de Vogais:
+Escreva uma função que recebe um array de palavras e retorna um novo array com a contagem de vogais em cada palavra.
+
+Remover Elementos Nulos:
+Escreva uma função que recebe um array que pode conter 
+valores nulos (null) e retorna um novo array sem os valores nulos.
+
+*/
+
+const medidas = [
+	{ altura: 10, largura: 15 },
+	{ altura: 20, largura: 10 },
+	{ altura: 42, largura: 5 },
+	{ altura: 28, largura: 5 },
+];
+
+function calcularArea (arr){
+  const area = arr.map ((area) => {
+    const newArea = area.altura * area.largura;
+    return newArea;
+  });
+  return area;
+};
+
+console.log(calcularArea(medidas));
+
+
+function nome (){
+    const newnome = arr.map(() =>{
+
+    });
+    return
+};
